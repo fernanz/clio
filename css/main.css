@@ -153,15 +153,76 @@ textarea {
         }
 }
 
+/* main title*/
+
+.hero__header {
+  text-align: center;
+  margin: -50px 0 100px 0;
+}
+
+.hero__title + .hero__description {
+  margin-top: 21px; }
+
+  .t-hero-title {
+    font-size: 73px;
+    font-weight: 700;
+    color: #0f0f0f;
+    line-height: 88px;
+    letter-spacing: -0.02em; }
+
+  .t-hero-subtitle {
+    font-size: 44px;
+    font-weight: 500;
+    color: #0f0f0f;
+    line-height: 53px;
+    letter-spacing: -0.0275em; }
+
+  .t-hero-title + .t-hero-subtitle {
+    margin-top: 12px; }
+
+  .t-hero-description {
+    font-size: 23px;
+    font-weight: 400;
+    color: #333333;
+    line-height: 35px;
+    letter-spacing: 0.004em; }
+
+  .t-hero-subtitle + .t-hero-description {
+    margin-top: 27px; }
+
+@media only screen and (max-width: 767px) {
+    .t-hero-title {
+      font-size: 53px;
+      line-height: 63px; }
+
+    .t-hero-subtitle {
+      font-size: 32px;
+      line-height: 38px; }
+
+    .t-hero-title + .t-hero-subtitle {
+      margin-top: 9px; }
+
+    .t-hero-subtitle + .t-hero-description {
+      margin-top: 20px; } }
+
+@media only screen and (max-width: 374px) {
+    .t-hero-title {
+      font-size: 48px; } }
+
+@media only screen and (max-width: 767px) {
+  .hero__header {
+    display: flex;
+    flex-direction: column; }
+    }
+
 /* ==========================================================================
    GRIDS
    ========================================================================== */
 
-
 .grid-head {
        display: grid;
        grid-template-columns: 1fr 20px 4fr 20px 1fr;
-       grid-template-rows: 0 auto auto;
+       grid-template-rows: 20px auto auto;
        grid-row-gap: 1em;
        margin-top: -2em;
    }
@@ -194,7 +255,7 @@ textarea {
       align-content:center;
       margin:  0 auto;
       padding-top: 10em;
-      width: 40%;
+      width: 50%;
       }
 
 .gh-full-width {
@@ -207,7 +268,7 @@ textarea {
   background-image: url(../img/main-mus-light.svg);
   background-size: contain;
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: top 3.7em center;
 }
 
 
@@ -230,7 +291,6 @@ textarea {
         background-image: none;
         }
 }
-
 
 
 /* ==========================================================================
@@ -256,7 +316,7 @@ textarea {
    }
 
 .item > p {
-  font-family: "Monserrat", sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Monserrat", sans-serif;
   font-size: 1rem;
   font-weight: 300;
 

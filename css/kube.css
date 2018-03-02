@@ -137,7 +137,7 @@ body {
   line-height: 24px; }
 
 body {
-  font-family: "Monserrat", Helvetica, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Monserrat", Helvetica, sans-serif;
   color: #313439;
   background-color: transparent; }
 
@@ -148,7 +148,7 @@ a:hover {
   color: #f03c69; }
 
 h1.title, h1, h2, h3, h4, h5, h6 {
-  font-family: "Oswald", Helvetica, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Oswald", Helvetica, sans-serif;
   font-weight: 700;
   color: #0d0d0e;
   text-rendering: optimizeLegibility;
