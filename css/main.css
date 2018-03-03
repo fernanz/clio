@@ -100,6 +100,25 @@ textarea {
     padding: 0.2em 0;
 }
 
+/* large pics */
+
+img.wide {
+  max-width: 100%;
+}
+
+.full-width {
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+
+
 /* ==========================================================================
    Header Style
    ========================================================================== */
@@ -157,11 +176,11 @@ textarea {
 
 .hero__header {
   text-align: center;
-  margin: -50px 0 100px 0;
+  margin: -15px 0 0 0;
 }
 
 .hero__title + .hero__description {
-  margin-top: 21px; }
+  margin-top: -50px; }
 
   .t-hero-title {
     font-size: 73px;
@@ -184,11 +203,10 @@ textarea {
     font-size: 23px;
     font-weight: 400;
     color: #333333;
-    line-height: 35px;
-    letter-spacing: 0.004em; }
+    line-height: 30px;
+    letter-spacing: 0.004em;
+  }
 
-  .t-hero-subtitle + .t-hero-description {
-    margin-top: 27px; }
 
 @media only screen and (max-width: 767px) {
     .t-hero-title {
@@ -199,15 +217,25 @@ textarea {
       font-size: 32px;
       line-height: 38px; }
 
-    .t-hero-title + .t-hero-subtitle {
-      margin-top: 9px; }
-
-    .t-hero-subtitle + .t-hero-description {
-      margin-top: 20px; } }
+      .hero__title + .hero__description {
+          line-height: 24px;
+          margin-top: -28px;
+          padding-left: 2.2em;
+          padding-right: 2.2em;
+    }
+ }
 
 @media only screen and (max-width: 374px) {
     .t-hero-title {
-      font-size: 48px; } }
+      font-size: 38px; }
+    .hero__title + .hero__description {
+        font-size: 20px;
+        line-height: 22px;
+        margin-top: -9px;
+        padding-left: 1em;
+        padding-right: 1em;
+      }
+}
 
 @media only screen and (max-width: 767px) {
   .hero__header {
@@ -255,7 +283,7 @@ textarea {
       align-content:center;
       margin:  0 auto;
       padding-top: 10em;
-      width: 50%;
+      width: 30%;
       }
 
 .gh-full-width {

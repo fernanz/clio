@@ -1,5 +1,8 @@
 body{
     -webkit-font-smoothing:antialiased;
+    display:flex;
+    flex-direction:column;
+    min-height:100vh
 }
 @media screen and (min-width:768px){
     body{
@@ -9,8 +12,37 @@ body{
 .page{
     flex-grow:1
 }
-
-ul{
+h1{
+    font-weight:700;
+    font-size:36px;
+    line-height:48px;
+    margin:0 0 24px 0
+}
+@media screen and (min-width:768px){
+    h1{
+        font-size:42px;
+        line-height:56px
+    }
+}
+h2{
+    font-family:Roboto,-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif;
+    font-size:36px;
+    font-weight:700;
+    color:#2f3132;
+    margin-bottom:16px
+}
+h2.subhead{
+    font-weight:400
+}
+h3{
+    font-family:Roboto,-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif;
+    font-size:18px;
+    font-weight:700;
+    line-height:26px;
+    padding-bottom:8px;
+    margin:0
+}
+p,ul{
     font-size:16px;
     line-height:26px;
     margin-top:0
@@ -816,13 +848,13 @@ header .logo-container .logo{
 @media screen and (min-width:960px){
     .cta{
         position:relative;
-        top:-65px;
+        top:-70px;
         width:880px;
         margin:auto
     }
 }
 .cta .cta-primary{
-    background-color:#fff;
+    background-color:rgba(255,255,255,1);
     padding:40px 24px 40px 24px
 }
 @media screen and (min-width:768px){
@@ -917,7 +949,7 @@ header .logo-container .logo{
 .whatsnew ol a:hover{
     padding:16px 24px 16px 24px;
     margin:-16px calc(40px - 24px) -16px -24px;
-    background-color:#2f3132;
+    background-color:rgba(19,26,34,1);
     border-radius:4px
 }
 @media screen and (max-width:960px){
