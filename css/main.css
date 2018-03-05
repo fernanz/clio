@@ -13,6 +13,12 @@
    --teal: #B2DFDB;
  }
 
+/*  PALETA
+ teal rgba(46,87,103,.7)
+ militar-dark rgba(47,55,58,1)
+ pale-orange rgba(211,109,6,.8)
+ pale-pink rgba(223,73,73,.9)
+*/
 /* ==========================================================================
    Base styles: opinionated defaults
    ========================================================================== */
@@ -89,6 +95,12 @@ textarea {
     resize: vertical;
 }
 
+.icn-sm {
+  display:flex;
+  justify-content:center;
+  align-items: flex-start;
+  padding-bottom: 10px;
+}
 /* ==========================================================================
    Browser Upgrade Prompt
    ========================================================================== */
@@ -242,7 +254,99 @@ img.wide {
     display: flex;
     flex-direction: column; }
     }
+/* ==========================================================================
+       Premiere classes
+========================================================================== */
 
+    .premiere-bg {
+      background-color: rgba(238,145,11,1);
+    }
+
+    .raw {
+      background-color: rgba(255,179,0,.5);
+      background-image: url('https://res.cloudinary.com/magnvs/image/upload/v1520244299/clio-1_aqq65f.jpg');
+      background-blend-mode:luminosity;
+      background-size: cover;
+      padding:0;
+      min-height: 400px;
+    }
+
+    .redonda {
+      margin:30px;
+      width:275px;
+      float:right;
+    }
+
+    img.shadow {
+       max-width: 90%;
+    	 margin-bottom: 0.5em;
+       border-radius: 50%;
+       -webkit-box-shadow: 6px 7px 13px -6px rgba(0,0,0,0.75);
+       -moz-box-shadow: 6px 7px 13px -6px rgba(0,0,0,0.75);
+       box-shadow: 6px 7px 13px -6px rgba(0,0,0,0.75);
+     }
+
+    div.premiere {
+       	font-weight: 300;
+        text-align: center;
+        padding: 50px 20px;
+       }
+
+    .premiere > h1 {
+        font-family: "Oswald", Helvetica, sans-serif;
+        font-size: 3em;
+        color: #fff;
+        letter-spacing: 3px;
+        line-height: 1.3em;
+       }
+    .premiere > h2 {
+        font-family: "Oswald", Helvetica, sans-serif;
+        font-size: 2.3em;
+        color: rgba(255,255,255,.5);
+        letter-spacing: 2.5px;
+        }
+
+    .premiere > h3 {
+        font-size: 2.3em;
+        color: #fff;
+        letter-spacing: 1px;
+            line-height: 1.2em;
+      }
+
+    .premiere > p {
+       font-family: -apple-system, BlinkMacSystemFont, "Monserrat", Helvetica, sans-serif;
+       font-size: 1.2em;
+    }
+
+    .premiere > ul {
+           list-style: none;
+           font-weight: 400;
+          }
+
+    .byline {
+         font-size: 3.7em;
+         color: rgba(248,54,0,0.7);
+
+       }
+
+@media screen and (max-width: 45em) {
+       .premiere > h1 {
+           font-family: "Oswald", Helvetica, sans-serif;
+           font-size: 1.7em;
+           letter-spacing: 2.5px;
+           line-height: 1.3em;
+          }
+       .premiere > h2 {
+           font-family: "Oswald", Helvetica, sans-serif;
+           font-size: 1.4em;
+           letter-spacing: 2.5px;
+           }
+
+       .premiere > h3 {
+           font-size: 1.2em;
+           line-height: 1em;
+         }
+       }
 /* ==========================================================================
    GRIDS
    ========================================================================== */
