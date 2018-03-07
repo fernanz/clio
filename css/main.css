@@ -10,15 +10,14 @@
    --yellow: #ffc600;
    --black: #272727;
    --celeste: #E0F7FA;
-   --teal: #B2DFDB;
+   --teal: rgba(46,87,103,.7);
+   --militar-dark: rgba(47,55,58,1);
+   --pale-orange: rgba(211,109,6,.8);
+   --pale-pink: rgba(223,73,73,.9);
+
  }
 
-/*  PALETA
- teal rgba(46,87,103,.7)
- militar-dark rgba(47,55,58,1)
- pale-orange rgba(211,109,6,.8)
- pale-pink rgba(223,73,73,.9)
-*/
+
 /* ==========================================================================
    Base styles: opinionated defaults
    ========================================================================== */
@@ -101,6 +100,13 @@ textarea {
   align-items: flex-start;
   padding-bottom: 10px;
 }
+
+@media only screen and (max-width: 767px) {
+    .icn-sm {
+      display:flex;
+      justify-content:flex-start;
+    }
+}
 /* ==========================================================================
    Browser Upgrade Prompt
    ========================================================================== */
@@ -144,7 +150,7 @@ img.wide {
   clear: both;
 }
 
-.codrops-top {
+.menu-top {
 	background-color: #1a1a1a;
 	background-color: rgba(26, 26, 26, 1);
 	text-transform: uppercase;
@@ -157,7 +163,7 @@ img.wide {
 	left: 0;
 }
 
-.codrops-top a {
+.menu-top a {
 	padding: 0 1em;
 	letter-spacing: 0.1em;
 	color: #fff;
@@ -165,21 +171,21 @@ img.wide {
   text-decoration: none;
 }
 
-.codrops-top a:hover {
+.menu-top a:hover {
 	background: #D50000;
 }
 
-.codrops-top span.right {
+.menu-top span.right {
 	float: right;
 }
 
-.codrops-top span.right a {
+.menu-top span.right a {
 	float: left;
 	display: block;
 }
 
 @media screen and (max-width: 40em) {
-  .codrops-top {
+  .menu-top {
         display:none;
         }
 }
@@ -201,35 +207,26 @@ img.wide {
     line-height: 88px;
     letter-spacing: -0.02em; }
 
-  .t-hero-subtitle {
-    font-size: 44px;
-    font-weight: 500;
-    color: #0f0f0f;
-    line-height: 53px;
-    letter-spacing: -0.0275em; }
-
-  .t-hero-title + .t-hero-subtitle {
-    margin-top: 12px; }
-
   .t-hero-description {
+    font-family: "Monserrat", sans-serif;
     font-size: 23px;
-    font-weight: 400;
-    color: #333333;
+    font-weight: 300;
+    color: rgba(144,164,174,1);
     line-height: 30px;
     letter-spacing: 0.004em;
   }
 
 
 @media only screen and (max-width: 767px) {
-    .t-hero-title {
+  .hero__header {
+    display: flex;
+    flex-direction: column; }
+
+  .t-hero-title {
       font-size: 53px;
-      line-height: 63px; }
+      line-height: 43px; }
 
-    .t-hero-subtitle {
-      font-size: 32px;
-      line-height: 38px; }
-
-      .hero__title + .hero__description {
+  .hero__title + .hero__description {
           line-height: 24px;
           margin-top: -28px;
           padding-left: 2.2em;
@@ -249,11 +246,6 @@ img.wide {
       }
 }
 
-@media only screen and (max-width: 767px) {
-  .hero__header {
-    display: flex;
-    flex-direction: column; }
-    }
 /* ==========================================================================
        Premiere classes
 ========================================================================== */
@@ -348,15 +340,16 @@ img.wide {
          }
        }
 /* ==========================================================================
-   GRIDS
+   GRIDS HEAD
    ========================================================================== */
 
 .grid-head {
        display: grid;
-       grid-template-columns: 1fr 20px 4fr 20px 1fr;
-       grid-template-rows: 20px auto auto;
+       grid-template-columns: 1fr 20px 1fr 20px 1fr;
+       grid-template-rows: 20px auto;
        grid-row-gap: 1em;
        margin-top: -2em;
+       height: 275px;
    }
 
 .grid-title {
@@ -372,27 +365,9 @@ img.wide {
   line-height: 1.2em;
 }
 
-.gh-section1 {
-       grid-column: 3;
-       grid-row: 1;
-   }
-
-.gh-section2 {
-       grid-column: 3 / 4;
-       grid-row: 2 / -1;
-   }
-
-.gh-section2 > svg {
-      display: flex;
-      align-content:center;
-      margin:  0 auto;
-      padding-top: 10em;
-      width: 30%;
-      }
-
 .gh-full-width {
        grid-column: 1 / -1;
-       grid-row: 1 / -2;
+       grid-row: 1 / -1;
        margin-top: -.7em;
    }
 
@@ -400,30 +375,69 @@ img.wide {
   background-image: url(../img/main-mus-light.svg);
   background-size: contain;
   background-repeat: no-repeat;
-  background-position: top 3.7em center;
+  background-position: top 67px center;
 }
 
+.imago-top-minus {
+  margin-top:-3em;
+}
+
+.imago-top-phantom {
+    display: none;
+}
 
 @media screen and (max-width: 45em) {
-  .gh-section2 > svg {
-        display: flex;
-        align-content:center;
-        margin:  0 auto;
-        padding-top: 8em;
-        width: 100%;
-        }
-  .grid-title {
-        display:flex;
-        align-content:center;
-        }
+  .grid-head {
+         height: 165px;
+         margin-top: -60px;
+       }
   .gt {
-        text-align: center;
-  }
+        display:none;
+       }
   .gh-full-width {
-        background-image: none;
+        background-image: cover;
+        }
+  .imago-top-minus {
+        display: none;
+        }
+  .imago-top-phantom {
+      width: 100%;
+      display:inline-block;
+      margin-top: -3em;
         }
 }
 
+/* ==========================================================================
+   Image grid
+   ========================================================================== */
+   
+   .contained-grid{
+       margin:0 auto;
+       max-width:1200px;
+       padding:0
+   }
+
+  .imgrid {
+       display: grid;
+       grid-gap: 5px;
+       grid-template-columns: repeat(auto-fit, minmax(234px, 1fr));
+       grid-auto-rows: 200px;
+       grid-auto-flow: dense;
+
+   }
+
+   .horizontal {
+       grid-column: span 2;
+   }
+
+   .vertical {
+       grid-row: span 2;
+   }
+
+   .big {
+       grid-column: span 2;
+       grid-row: span 2;
+   }
 
 /* ==========================================================================
    GRIDS

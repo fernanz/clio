@@ -42,9 +42,13 @@ p,ul{
     margin-top:0
 }
 a{
-    color:#7ca511;
+    color: var(--pale-orange);
     text-decoration:none;
     font-weight:700
+}
+
+a:hover {
+    color: var(--pale-pink);
 }
 ul{
     margin:16px 0 16px 24px;
@@ -975,7 +979,7 @@ header .logo-container .logo{
 .editors{
     background-image: linear-gradient(to bottom, #cfd9df 0%, #e2ebf0 50%);
     display:block;
-    margin: 0 0 52px 0;
+    margin: 0;
     padding-top: 90px;
     padding-bottom: 52px;
 }
@@ -1065,6 +1069,19 @@ section.social-buttons a:active{
 .editors:after{
     clear:both
 }
+
+.gallery {
+  display:block;
+  background-color:var(--militar-dark);
+  padding:5px 0 5px 0;
+  margin-top: 0;
+}
+
+@media screen and (max-width:1200px){
+  .gallery {
+    display: none;
+  }
+}
 .communitysupport{
     display:block;
     background-color:#fff;
@@ -1143,6 +1160,11 @@ section.social-buttons a:active{
   font-weight: 300;
   font-size: 1.2em;
 }
+
+.communitysupport .community-features .feature h3{
+  color: var(--militar-dark);
+}
+
 .communitysupport .contributors{
     display:block;
     float:left;
@@ -1195,6 +1217,7 @@ section.social-buttons a:active{
 .communitysupport:after{
     clear:both
 }
+
 .collab,.how-it-works{
     margin:40px 16px
 }
