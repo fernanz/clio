@@ -408,9 +408,9 @@ img.wide {
 }
 
 /* ==========================================================================
-   Image grid
+   Image grid ONE
    ========================================================================== */
-   
+
    .contained-grid{
        margin:0 auto;
        max-width:1200px;
@@ -439,6 +439,38 @@ img.wide {
        grid-row: span 2;
    }
 
+   /* ==========================================================================
+      Image grid TWO
+      ========================================================================== */
+
+   section.pics{
+     background-color: var(--militar-dark);
+     padding: .2vw;
+     font-size: 0;
+     display: -ms-flexbox;
+     -ms-flex-wrap: wrap;
+     -ms-flex-direction: column;
+     -webkit-flex-flow: row wrap;
+     flex-flow: row wrap;
+     display: -webkit-box;
+     display: flex;
+   }
+   section.pics div {
+     -webkit-box-flex: auto;
+     -ms-flex: auto;
+     flex: auto;
+     width: 200px;
+     margin: .2vw;
+   }
+   section.pics div img {
+     width: 100%;
+     height: auto;
+   }
+   @media screen and (max-width: 400px) {
+     section.pics div { margin: 0; }
+     section.pics { padding: 0; }
+
+   }
 /* ==========================================================================
    GRIDS
    ========================================================================== */
