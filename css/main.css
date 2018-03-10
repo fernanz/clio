@@ -61,6 +61,16 @@ hr {
     padding: 0;
 }
 
+hr.thick {
+    display: block;
+    height: 5px;
+    border: 0;
+    border-top: 5px solid #1a1a1a;
+    margin: 5em 0;
+    padding: 0;
+    width: 65%;
+}
+
 /*
  * Remove the gap between audio, canvas, iframes,
  * images, videos and the bottom of their containers:
@@ -172,6 +182,7 @@ img.wide {
 }
 
 .menu-top a:hover {
+  color: #fff;
 	background: #D50000;
 }
 
@@ -197,17 +208,34 @@ img.wide {
   margin: -15px 0 0 0;
 }
 
+.hero__header-b {
+  text-align: center;
+  margin: -15px 0 50px 0;
+}
+
 .hero__title + .hero__description {
   margin-top: -50px; }
 
-  .t-hero-title {
+.t-hero-title {
     font-size: 73px;
     font-weight: 700;
     color: #0f0f0f;
     line-height: 88px;
     letter-spacing: -0.02em; }
 
-  .t-hero-description {
+.t-hero-title span {
+    font-size: 47px;
+    line-height: 24px;
+    font-weight: 400;
+    color: rgba(26,26,26,.9);
+    letter-spacing: -0.02em; }
+
+h1.t-hero-title{
+      line-height: .9em;
+      margin-bottom: 1em;
+}
+
+.t-hero-description {
     font-family: "Monserrat", sans-serif;
     font-size: 23px;
     font-weight: 300;
@@ -228,7 +256,7 @@ img.wide {
 
   .hero__title + .hero__description {
           line-height: 24px;
-          margin-top: -28px;
+          margin-top: -20px;
           padding-left: 2.2em;
           padding-right: 2.2em;
     }
@@ -237,20 +265,129 @@ img.wide {
 @media only screen and (max-width: 374px) {
     .t-hero-title {
       font-size: 38px; }
+
+    .t-hero-title span {
+        font-size: 30px; }
+
     .hero__title + .hero__description {
-        font-size: 20px;
-        line-height: 22px;
-        margin-top: -9px;
+        font-size: 18px;
+        margin-top: -15px;
         padding-left: 1em;
         padding-right: 1em;
       }
 }
 
 /* ==========================================================================
-       Premiere classes
+       Main Nav
 ========================================================================== */
 
-    .premiere-bg {
+.dont-render-dawg {
+  position: absolute;
+  height: 0;
+  width: 0;
+}
+
+.main-nav {
+  background: #eee;
+  box-sizing: border-box;
+  font-family: "Oswald", Helvetica, sans-serif
+}
+.main-nav ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content:center;
+  list-style: none;
+}
+.main-nav a {
+  padding: 1.25rem 0.5rem;
+  font-size: 1rem;
+  width: 275px;
+  font-weight: bold;
+  text-decoration: none;
+  display: flex;
+  align-items: flex-start;
+  color: #333;
+}
+.main-nav a:hover, .main-nav a:focus {
+  background: #ccc;
+  color: black;
+}
+.main-nav a:hover svg, .main-nav a:focus svg {
+  fill: var(--pale-pink);
+}
+
+.main-nav li:nth-child(2) a:hover svg {
+  fill: rgba(211,109,6,1);
+}
+
+.main-nav li:nth-child(3) a:hover svg {
+  fill: rgba(255,0,0,.8 );
+}
+
+.main-nav li:nth-child(4) a:hover svg {
+  fill: rgba(0,182,237,1);
+}
+
+.main-nav li:nth-child(5) a:hover svg {
+  fill: rgba(120,144,156,1);
+}
+
+.main-nav a:hover span, .main-nav a:focus span {
+  color: black;
+}
+
+.main-nav li.active {
+  display:none;
+}
+.main-nav span {
+  display: block;
+  font-size: .8rem;
+  font-weight: normal;
+  color: #888;
+  margin: 0.25rem 0 0 0;
+}
+.main-nav .icon {
+  width: 40px;
+  height: 40px;
+  float: left;
+  margin-right: 1rem;
+  fill: #999;
+}
+.main-nav.outlines * {
+  outline: 1px solid rgba(255, 0, 0, 0.5);
+}
+
+.options {
+  text-align: center;
+  padding: 2rem 0;
+}
+.options select {
+  margin-right: 2rem;
+}
+
+.icon-b {
+  width: 128px;
+  height: 128px;
+  padding: 32px;
+  margin: 140px 0 0 46px;
+  fill: rgba(211,109,6,1);
+}
+@media (min-width: 1000px) {
+  .main-nav a {
+    max-width: 500px;
+    font-size: 1.3rem;
+  }
+  .main-nav .icon {
+    width: 25px;
+    height: 25px;
+  }
+}
+
+/* ==========================================================================
+       Premiere classes
+========================================================================== */    .premiere-bg {
       background-color: rgba(238,145,11,1);
     }
 
@@ -362,6 +499,7 @@ img.wide {
   margin-top: 3em;
   margin-left: 1em;
   color:#154267;
+  text-shadow:1px 1px 2px #607D8B;
   line-height: 1.2em;
 }
 
@@ -370,6 +508,7 @@ img.wide {
        grid-row: 1 / -1;
        margin-top: -.7em;
    }
+
 
 .gh-full-width {
   background-image: url(../img/main-mus-light.svg);
@@ -386,12 +525,63 @@ img.wide {
     display: none;
 }
 
+.grid-head-b {
+             display: grid;
+             grid-template-columns: 350px 20px 1fr 20px 1fr;
+             grid-template-rows: auto 100px 300px;
+             grid-row-gap: 1em;
+             margin-top: -2em;
+             height: 275px;
+         }
+
+.grid-title-b {
+          display:flex;
+          align-content: center;
+         }
+
+.gt-b {
+           height: auto;
+           margin-top: .7em;
+           margin-left: 1em;
+           color:#154267;
+           text-shadow:1px 1px 2px #607D8B;
+           line-height: 1.2em;
+         }
+
+.gh-full-width-b{
+          grid-column: 1 / -1;
+          grid-row: 1 / -1;
+          margin-top: 2em;
+      }
+
+.gh-full-width-b {
+  background-image: url(../img/main-mus-light.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: top center;
+}
+
+.imago-b {
+    grid-column: 1 / 2;
+    grid-row: 3;
+}
+
+.imago-top-b{
+  margin-top:0;
+}
+
 @media screen and (max-width: 45em) {
   .grid-head {
          height: 165px;
          margin-top: -60px;
        }
-  .gt {
+  .grid-head-b {
+        height: 165px;
+        margin-top: -33px;
+        margin-bottom: 10em;
+        }
+
+  .gt, .gt-b {
         display:none;
        }
   .gh-full-width {
@@ -439,7 +629,7 @@ img.wide {
        grid-row: span 2;
    }
 
-   /* ==========================================================================
+/* ==========================================================================
       Image grid TWO
       ========================================================================== */
 
@@ -472,72 +662,112 @@ img.wide {
 
    }
 /* ==========================================================================
-   GRIDS
+   MAIN GRID
    ========================================================================== */
+.vertical-text {
+    writing-mode: vertical-rl;
+   	text-orientation: mixed;
+    padding: 10px;
+   }
 
 .gridum {
-     background-color: var(--teal);
-     margin: 0 auto;
-     max-width: 1200px;
+     box-sizing: border-box;
+     margin: 50px auto;
+     max-width: 1600px;
      display: grid;
-     grid-gap: 10px;
+     grid-gap: 0;
      border: 10px solid transparent;
-     grid-template-columns: 27% repeat(3, 1fr);
-     grid-template-rows: 175px 350px 150px 350px;
+     grid-template-columns: 400px 250px 350px 500px 100px;
+     grid-template-rows: 350px 250px 100px 50px 350px 400px 400px 300px;
    }
 
 .item {
      /* We center the contents of these items. You can also do this with flexbox too! */
-     display: grid;
-     justify-content: left;
-     align-items: center;
    }
 
 .item > p {
-  font-family: -apple-system, BlinkMacSystemFont, "Monserrat", sans-serif;
-  font-size: 1rem;
-  font-weight: 300;
-
-
+  font-family: "Monserrat", Helvetica, sans-serif;
+  font-size: 1.2em;
+  font-weight: 400;
+  color:#1a1a1a;
 }
+
 .item1 {
-  grid-row: span 4;
+  grid-column: 1 / 4;
+  grid-row: 1 / 4;
 }
 
 .item2 {
-  grid-column: 2 / -1;
+    grid-column: 4 / -2;
+    grid-row: 1 / 2;
+    padding: 75px 30px 0 80px;
 }
 
 .item3 {
-  grid-column: 2 / 3;
-  grid-row: 2 / 4;
+  grid-column: 5 / -1;
+  grid-row: span 4;
 }
 
 .item4{
-  grid-column: 3 / 4;
-  grid-row: 2 / 4;
+  grid-column: 4 / -2;
+  grid-row: 2 / 5;
+  padding-left: 80px;
 }
 
 .item5 {
-  grid-column: 4 / 5;
-  grid-row: 2 / 4;
+  grid-column: 3 / 4;
+  grid-row: 3 / 4;
+  background-color: #fff;
+  padding: 15px;
 }
 
 .item6 {
-  grid-column: 2 / 4;
+  grid-column: 2 / 3;
   grid-row: 4 / 5;
+  background-color: rgb(211,109,6);
 }
 
+.item7 {
+  grid-column: 1 / 2;
+  grid-row: 5;
+}
 
+.item8 {
+  grid-column: 2 / 3;
+  grid-row: 5 / 6;
+  padding: 75px 30px 0 0;
+}
 
+.item9 {
+  grid-column: 4 / -2;
+  grid-row: 5 / 7;
+}
 
+.item10 {
+  grid-column: 2 / 4;
+  grid-row: 6 / 7;
+}
 
+.item11 {
+  grid-column: 2 / 4;
+  grid-row: 7 / 8;
+}
 
+.item12 {
+  grid-column: 2 / 4;
+  grid-row: 8 / -1;
+}
 
+.item14 {
+  grid-column: 4 / 5;
+  grid-row: 7 / 8;
+  padding: 15px 30px 0 80px;
+}
 
-
-
-
+.item15 {
+  grid-column: 4 / 5;
+  grid-row: 8 / -1;
+}
 /* ==========================================================================
    Helper classes
    ========================================================================== */
