@@ -251,8 +251,9 @@ h1.t-hero-title{
     flex-direction: column; }
 
   .t-hero-title {
-      font-size: 53px;
-      line-height: 43px; }
+    padding-top: 1em;
+    font-size: 53px;
+    line-height: 43px; }
 
   .hero__title + .hero__description {
           line-height: 24px;
@@ -264,10 +265,11 @@ h1.t-hero-title{
 
 @media only screen and (max-width: 374px) {
     .t-hero-title {
-      font-size: 38px; }
+      padding-top: 1em;
+      font-size: 32px; }
 
     .t-hero-title span {
-        font-size: 30px; }
+        font-size: 24px; }
 
     .hero__title + .hero__description {
         font-size: 18px;
@@ -323,7 +325,7 @@ h1.t-hero-title{
 }
 
 .main-nav li:nth-child(3) a:hover svg {
-  fill: rgba(255,0,0,.8 );
+  fill: rgba(255,0,0,.8);
 }
 
 .main-nav li:nth-child(4) a:hover svg {
@@ -367,13 +369,6 @@ h1.t-hero-title{
   margin-right: 2rem;
 }
 
-.icon-b {
-  width: 128px;
-  height: 128px;
-  padding: 32px;
-  margin: 140px 0 0 46px;
-  fill: rgba(211,109,6,1);
-}
 @media (min-width: 1000px) {
   .main-nav a {
     max-width: 500px;
@@ -570,12 +565,13 @@ h1.t-hero-title{
   margin-top:0;
 }
 
-@media screen and (max-width: 45em) {
+@media screen and (max-width: 767px) {
   .grid-head {
          height: 165px;
          margin-top: -60px;
        }
   .grid-head-b {
+        grid-template-columns: auto;
         height: 165px;
         margin-top: -33px;
         margin-bottom: 10em;
@@ -587,8 +583,20 @@ h1.t-hero-title{
   .gh-full-width {
         background-image: cover;
         }
+  .gh-full-width-b {
+        background-image: contain;
+              }
   .imago-top-minus {
         display: none;
+        }
+
+  .imago-b {
+            grid-column: 1 / -1;
+            grid-row: 3;
+        }
+  .imago-top-b{
+          margin-top:0;
+          width: 335px;
         }
   .imago-top-phantom {
       width: 100%;
@@ -638,8 +646,10 @@ h1.t-hero-title{
      padding: .2vw;
      font-size: 0;
      display: -ms-flexbox;
-     -ms-flex-wrap: wrap;
-     -ms-flex-direction: column;
+         flex-wrap: wrap;
+     -moz-flex-wrap: wrap;
+         flex-direction: column;
+     -moz-flex-direction: column;
      -webkit-flex-flow: row wrap;
      flex-flow: row wrap;
      display: -webkit-box;
@@ -673,16 +683,11 @@ h1.t-hero-title{
 .gridum {
      box-sizing: border-box;
      margin: 50px auto;
-     max-width: 1600px;
      display: grid;
      grid-gap: 0;
-     border: 10px solid transparent;
-     grid-template-columns: 400px 250px 350px 500px 100px;
-     grid-template-rows: 350px 250px 100px 50px 350px 400px 400px 300px;
-   }
-
-.item {
-     /* We center the contents of these items. You can also do this with flexbox too! */
+     grid-template-columns: 400px 250px 350px 475px auto;
+     grid-template-rows: 350px 250px 100px 50px 350px repeat(2, 420px) 300px;
+     justify-content: center;
    }
 
 .item > p {
@@ -700,7 +705,7 @@ h1.t-hero-title{
 .item2 {
     grid-column: 4 / -2;
     grid-row: 1 / 2;
-    padding: 75px 30px 0 80px;
+    padding: 75px 30px 0 40px;
 }
 
 .item3 {
@@ -711,7 +716,7 @@ h1.t-hero-title{
 .item4{
   grid-column: 4 / -2;
   grid-row: 2 / 5;
-  padding-left: 80px;
+  padding-left: 40px;
 }
 
 .item5 {
@@ -725,6 +730,12 @@ h1.t-hero-title{
   grid-column: 2 / 3;
   grid-row: 4 / 5;
   background-color: rgb(211,109,6);
+}
+
+.item6-colonia {
+  grid-column: 2 / 3;
+  grid-row: 4 / 5;
+  background-color: rgba(255,0,0,.8);
 }
 
 .item7 {
@@ -741,6 +752,7 @@ h1.t-hero-title{
 .item9 {
   grid-column: 4 / -2;
   grid-row: 5 / 7;
+  padding-left: 40px;
 }
 
 .item10 {
@@ -761,12 +773,153 @@ h1.t-hero-title{
 .item14 {
   grid-column: 4 / 5;
   grid-row: 7 / 8;
-  padding: 15px 30px 0 80px;
+  padding: 15px 30px 0 40px;
 }
 
 .item15 {
   grid-column: 4 / 5;
   grid-row: 8 / -1;
+}
+
+
+@media screen and (max-width: 1200px){
+ .vertical-text {
+     padding: 0;
+    }
+ .vertical-text > h2{
+   font-size: 1.5em;
+     }
+ .gridum {
+      display: grid;
+      grid-template-columns: 300px 200px 300px 370px 1fr;
+      grid-template-rows: 300px 160px 100px 55px 250px repeat(2, 375px) 200px;
+      justify-content: center;
+    }
+
+  .item > p {
+      font-family: "Monserrat", Helvetica, sans-serif;
+      font-size: .9em;
+      font-weight: 300;
+    }
+  .item2 {
+    grid-column: 4 / -2;
+    grid-row: 1 / 2;
+    padding: 55px 20px 0 30px;
+       }
+   .item4 {
+    padding-left: 30px;
+       }
+  .item8 {
+         padding: 45px 0 0 0;
+       }
+    .item9 {
+    padding: 10px 0 0 30px;
+    overflow: hidden;
+       }
+   .item14 {
+      padding: 20px 0 0 30px;
+       }
+
+    hr.thick {
+        margin: .9em 0;
+    }
+}
+
+@media screen and (min-width: 768px){
+.sala-name {
+  display:none;
+}
+}
+@media screen and (max-width: 767px){
+   .sala-name {
+        margin-top: 50px;
+        margin-bottom: 20px;
+        padding: 10px 0;
+      }
+   .sala-name h2 {
+        margin: 0;
+        padding: 0;
+        color: var(--militar-dark);
+      }
+   .icon-title {
+        float:left;
+        fill: var(--militar-dark);
+        width: 2.9em;
+        padding-left: 10px;
+        margin:0;
+      }
+  .vertical-text {
+      padding: 0;
+     }
+  .vertical-text > h2{
+    font-size: 1.5em;
+      }
+  .gridum {
+       margin: 0 auto;
+       display: grid;
+       grid-template-columns: 1fr;
+       grid-template-rows: auto;
+     }
+  .item > p {
+       font-family: "Monserrat", Helvetica, sans-serif;
+       font-size: .9em;
+       font-weight: 400;
+       color:#1a1a1a;
+     }
+  .item1 {
+       grid-column: 1 ;
+       grid-row: 1 / 2;
+       overflow: hidden;
+     }
+
+  .item2 {
+         grid-column: 1 ;
+         grid-row: 2 / 3;
+         padding: 35px 10px;
+     }
+
+  .item4 {
+       grid-column: 1 ;
+       grid-row: 3 / 4;
+       padding-left: 10px;
+       padding-right: 10px;
+       overflow:hidden;
+     }
+
+  .item3,
+  .item5,
+  .item6,
+  .item7,
+  .item8,
+  .item10,
+  .item11,
+  .item12 {
+    display:none;
+  }
+  .item9 {
+    grid-column: 1 ;
+    grid-row: 4 / 6;
+    padding-left: 0;
+    overflow:hidden;
+  }
+
+  .item14 {
+    grid-column: 1 ;
+    grid-row: 6 / 7;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .item15 {
+    grid-column: 1 ;
+    grid-row: 7 / 8;
+  }
+  hr.thick {
+      margin: .5em 0;
+  }
+  figure.logo-muni-grid {
+    width: 250px;
+  }
 }
 /* ==========================================================================
    Helper classes
