@@ -794,8 +794,8 @@ h1.t-hero-title{
      }
  .gridum {
       display: grid;
-      grid-template-columns: 300px 200px 300px 370px 1fr;
-      grid-template-rows: 300px 160px 100px 55px 250px repeat(2, 375px) 200px;
+      grid-template-columns: 275px 200px 275px 350px 60px;
+      grid-template-rows: 270px 200px 55px 65px 250px repeat(2, 410px) 210px;
       justify-content: center;
     }
 
