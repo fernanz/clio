@@ -67,7 +67,7 @@ hr.thick {
     height: 5px;
     border: 0;
     border-top: 5px solid #1a1a1a;
-    margin: 5em 0;
+    margin: 3em 0;
     padding: 0;
     width: 65%;
 }
@@ -131,6 +131,10 @@ textarea {
 
 /* large pics */
 
+body {
+  overflow-x: hidden;
+}
+
 img.wide {
   max-width: 100%;
 }
@@ -142,7 +146,7 @@ img.wide {
   right: 50%;
   margin-left: -50vw;
   margin-right: -50vw;
-  display: grid;
+  display:grid;
   justify-content: center;
   align-items: center;
 }
@@ -166,7 +170,7 @@ img.wide {
 	background-color: rgba(26, 26, 26, 1);
 	text-transform: uppercase;
 	position: fixed;
-	width: 100vw;
+	width: 100%;
 	font-size: 0.7em;
 	line-height: 2.2;
 	z-index: 50000;
@@ -175,7 +179,7 @@ img.wide {
 }
 
 .menu-top a {
-	padding: 0 1em;
+	padding: 0 3.5em;
 	letter-spacing: 0.1em;
 	color: #fff;
 	display: inline-block;
@@ -686,14 +690,14 @@ h1.t-hero-title{
      margin: 50px auto;
      display: grid;
      grid-gap: 0;
-     grid-template-columns: 400px 250px 350px 475px auto;
-     grid-template-rows: 350px 250px 100px 50px 350px repeat(2, 420px) 300px;
+     grid-template-columns: 340px 210px 290px 370px 50px;
+     grid-template-rows: 350px 250px 100px 50px 350px repeat(2, 430px) 310px;
      justify-content: center;
    }
 
 .item > p {
   font-family: "Monserrat", Helvetica, sans-serif;
-  font-size: 1.2em;
+  font-size: 1em;
   font-weight: 400;
   color:#1a1a1a;
 }
