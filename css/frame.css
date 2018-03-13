@@ -1533,6 +1533,7 @@ section.social-buttons a:active{
     margin-top:0!important
 }
 footer{
+    margin-top: -16px;
     padding:80px 0 64px 0;
     text-align:center;
     background-color: #131a22;
