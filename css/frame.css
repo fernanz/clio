@@ -60,6 +60,20 @@ ul{
     max-width:1200px;
     padding:0 24px
 }
+
+.contained > h1 {
+  font-family: "Oswald",-apple-system,BlinkMacSystemFont,Helvetica,sans-serif;
+  font-weight:700;
+  font-size:36px;
+  line-height:48px;
+  margin:0 0 24px 0
+}
+
+.setecientos {
+  margin: 0 auto;
+  width: 750px;
+}
+
 @media screen and (min-width:768px){
     .contained{
         padding:0 40px
@@ -912,12 +926,12 @@ header .logo-container .logo{
 .whatsnew{
     padding:40px 0 40px 0;
     background-color:#51555d;
-    color:#fff
+    color:#fff;
 }
 @media screen and (min-width:960px){
     .whatsnew{
-        margin-top:-98px;
-        padding-top:75px
+        margin-top:0;
+        padding-top: 50px
     }
 }
 .whatsnew ol{

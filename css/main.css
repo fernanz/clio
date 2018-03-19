@@ -151,11 +151,8 @@ img.wide {
   align-items: center;
 }
 
-
-/* ==========================================================================
-   Header Style
-   ========================================================================== */
 /* Clearfix hack by Nicolas Gallagher: http://nicolasgallagher.com/micro-clearfix-hack/ */
+
 .clearfix:before, .clearfix:after {
   content: " ";
    display: table;
@@ -165,6 +162,13 @@ img.wide {
   clear: both;
 }
 
+#ubicacion {
+  background-image: linear-gradient(to bottom, #cfd9df 0%, #e2ebf0 50%);
+}
+
+/* ==========================================================================
+   Header Style
+   ========================================================================== */
 .menu-top {
 	background-color: #1a1a1a;
 	background-color: rgba(26, 26, 26, 1);
@@ -747,6 +751,12 @@ h1.t-hero-title{
   grid-column: 2 / 3;
   grid-row: 4 / 5;
   background-color: rgba(0,182,237,1);
+}
+
+.item6-republica {
+  grid-column: 2 / 3;
+  grid-row: 4 / 5;
+  background-color: rgba(120,144,156,1);
 }
 
 .item7 {
