@@ -63,7 +63,7 @@ ul{
 
 .contained-gallery {
     margin:0 auto;
-    max-width:1700px;
+    max-width:1200px;
     padding:0 .7em;
 }
 
@@ -75,10 +75,6 @@ ul{
   margin:0 0 24px 0
 }
 
-.setecientos {
-  margin: 0 auto;
-  width: 750px;
-}
 
 @media screen and (min-width:768px){
     .contained{
@@ -528,6 +524,7 @@ header .algolia-search{
     margin-top:1px;
     -webkit-margin-top:0;
     -webkit-display:inline-block;
+    display:inline-block;
     vertical-align:baseline!important
 }
 header input.closed{
@@ -536,7 +533,6 @@ header input.closed{
 header input{
     border:none;
     border-radius:0;
-    appearance:none;
     background:0 0;
     color:#f6f6f6;
     display:inline-block;
@@ -544,6 +540,7 @@ header input{
     font-weight:400;
     max-width:160px;
     -webkit-appearance:none;
+    -moz-appearance:none;
     visibility:visible
 }
 header input:focus{
@@ -805,7 +802,7 @@ header .logo-container .logo{
 @media screen and (min-width:768px){
     .hero .calendar-cta{
         display:block;
-        float:left;
+        float:none;
         margin-right:2.3576516%;
         width:40.2913699%;
         margin-left:8.52980430%;
@@ -1003,7 +1000,7 @@ header .logo-container .logo{
     line-height:20px
 }
 .editors{
-    background-image: linear-gradient(to bottom, #cfd9df 0%, #e2ebf0 50%);
+    background-image: linear-gradient(to bottom, #cfd9df 0%, #e2ebf0 40%);
     display:block;
     margin: 0;
     padding-top: 90px;
@@ -1096,22 +1093,10 @@ section.social-buttons a:active{
     clear:both
 }
 
-.gallery {
-  display:block;
-  background-color:var(--militar-dark);
-  padding:5px 0 5px 0;
-  margin-top: 0;
-}
-
-@media screen and (max-width:1200px){
-  .gallery {
-    display: none;
-  }
-}
 .communitysupport{
     display:block;
     background-color:#fff;
-    padding:50px 0 64px 0
+    padding:110px 0 64px 0
 }
 
 .communitysupport h2{
@@ -1567,7 +1552,7 @@ footer{
 }
 @media screen and (min-width:768px){
     footer .footer-info{
-        ftext-align: center;
+        text-align: center;
         margin-right:24px
     }
 }

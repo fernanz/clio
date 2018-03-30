@@ -33,6 +33,87 @@
         <link rel="stylesheet" href="css/jquery.bxslider.css">
         <link rel='stylesheet' href="css/fancy-box.css">
         <link rel='stylesheet' href="css/s-tyle.css">
+        <link rel='stylesheet' href="css/tooltip.css">
+
+        <style>
+
+        /* Scene */
+        .scene {
+        position:absolute;
+        top: 300px;
+        left: 0;
+        width: 60%;
+        height: 100vh;
+        //pointer-events: none;
+        z-index: 1;
+        }
+
+        .scene .blob-1 path {
+        fill: url(#gradient-1);
+        }
+
+        .scene .blob-2 path {
+        fill: url(#gradient-2);
+        }
+
+        .scene .blob-3 path {
+        fill: url(#gradient-3);
+        }
+
+        .scene .blob-4 path {
+        fill: url(#gradient-4);
+        }
+
+        .scene .blob-5 path {
+        fill: url(#gradient-5);
+        }
+
+        .scene .blob-6 path {
+        fill: url(#gradient-6);
+        }
+
+        .scene path:first-of-type {
+        fill-opacity: 0.1;
+        stroke-width: 1px;
+        stroke:#fff;
+        stroke-opacity: 0.9;
+        }
+
+        .scene path:nth-of-type(2) {
+        fill-opacity: 0.3;
+        stroke-width: 1px;
+        stroke:#fff;
+        stroke-opacity: 0.7;
+        }
+
+        .scene path:nth-of-type(3) {
+        fill-opacity: 0.5;
+        stroke-width: 1px;
+        stroke:#fff;
+        stroke-opacity: 0.5;
+        }
+
+        .scene path:nth-of-type(4) {
+        fill-opacity: 0.7;
+        stroke-width: 1px;
+        stroke:#fff;
+        stroke-opacity: 0.4;
+        }
+
+        .scene path:nth-of-type(5) {
+        fill-opacity: 0.8;
+        stroke-width: 1px;
+        stroke:#fff;
+        stroke-opacity: 0.3;
+        }
+
+        .scene path:nth-of-type(6) {
+        fill-opacity: 0.9;
+        stroke-width: 1px;
+        stroke:#fff;
+        stroke-opacity: 0.2;
+        }
+        </style>
 
     </head>
 <body>
@@ -41,6 +122,7 @@
         <![endif]-->
 
         <!-- Add your site or application content here -->
+
         <div class="row">
           <div class="col col-12">
             <div class="menu-top clearfix">
@@ -134,7 +216,6 @@
   </div>
 </section>
 
-
 <section class="orange-block" >
 <div class="row between">
 
@@ -142,6 +223,8 @@
   <div class="col col-6" >
   <h2 class="centered-text-white">PROCESO EVOLUTIVO DE LAS CULTURAS DEL LITORAL</h2>
   <div class="text-columns">
+    <svg viewBox="0 0 128 128" class="orange-block-icn">
+      <use xlink:href="#leaf"></svg>
   <p>La sala muestra los aspectos más importantes de las culturas precolombinas de la costa ecuatoriana, desde Valdivia del período Formativo hasta la Manteño-Guancavilca de Integración.</p>
   <p>La exhibición recoge una selección de tiestos tanto como esculturas modeladas en barro, objetos de arte utilitario o estético productos de la cerámica y metalurgia desarrolladas en cada una de las culturas del pasado aborigen.</p>
   <p>Destacan los extarordinarios monumentos líticos guancavilcas, únicos en su tipo que se conocen en la nación.</p>
@@ -152,21 +235,21 @@
 </div>
 </section><!-- END ORANGE HEAD INTRO -->
 
-<section class="gridum">
-  <div class="item7">
+<section class="gridum orange-gridum">
+  <div class="item1" style="z-index:2;">
   <img src="/img/guasango.png" />
   </div>
-  <div class="item8">
+  <div class="item2">
   <h2>ESCULTURA MONUMENTAL GUANCAVILCA</h2>
   <hr class="thick"/>
   </div>
-  <div class="item9-light">
+  <div class="item3-light">
   <img src="/img/biritute.png" />
   <div class="vertical-text">
     <h1>&#10097;</h1>
   </div>
   </div>
-  <div class="item item10">
+  <div class="item item4">
   <h1>&#10094;</h1>
   <h6>Poste totémico Guancavilca<br  />
   <span style="color:rgb(211,109,6); ">Aprox. 1400 d.C.</span>
@@ -174,10 +257,10 @@
   <p>Fue descubierto en 1936 en las estribaciones de la cordillera Chongón-Colonche, cerro Los Santos, por el arqueólogo guayaquileño Carlos Zeballos Menéndez. Mide 8.55 m de altura y es de madera de guasango. </p>
   <p>Tiene tallado 32 figuras humanas entre femeninas y masculinas y dos caimanes ubicados en la cúspide del madero. El tótem es de carácter ritual, sin embargo el significado de su expresión simbólica es aún un interrogante sin resolver.</p>
   </div>
-  <div class="item11">
+  <div class="item5">
   <img src="/img/lagarto.png" />
   </div>
-  <div class="item item12">
+  <div class="item item6">
   <h6>Monolito zoomorfo puná<br  />
   <span style="color:rgb(211,109,6); ">Aprox. 1400 d.C.</span>
   </h6>
@@ -185,7 +268,7 @@
   <p>De este monolito, que debido a su similitud a otros hallados en América y estudiados por antropólogos, podría decirse que fue utilizado como altar de sacrificios.</p>
   <hr />
   </div>
-  <div class="item item14">
+  <div class="item item7">
   <h6>San Biritute<br  />
   <span style="color:rgb(211,109,6); ">Aprox. 1400 d.C.</span>
   </h6>
@@ -202,17 +285,35 @@
 </section>
 
 <section class="contained-gallery">
-<div class="gallery">
 
+	<div class="row align-center">
+    <div class="col col-4 centered-text">
+	 <div class="tooltip tooltip--indis" data-type="indis">
+							<div class="tooltip__trigger" role="tooltip" aria-describedby="info-indis">
+								<h2 class="tooltip__trigger-text">EN EXHIBICIÓN PERMANENTE</h2>
+							</div>
+							<div class="tooltip__base">
+								<svg class="tooltip__shape" width="100%" height="100%" viewBox="0 0 400 300">
+									<path d="M 44.5,24 C 138,4.47 246,-6.47 356,24 367,26.9 376,32.9 376,44 L 376,256 C 376,267 367,279 356,276 231,240 168,241 44.5,276 33.8,279 24.5,267 24.5,256 L 24.5,44 C 24.5,32.9 33.6,26.3 44.5,24 Z"/>
+								</svg>
+								<div class="tooltip__content" id="info-indis">Pequeña selección de objetos patrimoniales expuestos en esta sala. Diferentes períodos desde el Formativo hasta Integración</div>
+							</div>
+						</div>
+	</div><!-- end col-3 -->
+	</div><!-- end row align center -->
+
+
+
+<div class="gallery">
 <div class="gallery-son">
   <div class="gallery-item">
-    <a href="https://c1.staticflickr.com/9/8148/29324593462_abebaddc38_k.jpg" data-fancybox="images">
-        <img class="gallery-image" src="https://c1.staticflickr.com/9/8148/29324593462_f890687b7a_m.jpg"/>
+    <a href="https://c2.staticflickr.com/6/5499/30972532232_051e1dc57e_h.jpg" data-fancybox="images">
+        <img class="gallery-image" src="https://c2.staticflickr.com/6/5499/30972532232_e9a298a0c5_m.jpg" />
     </a>
+    </div>
+	<h5>Título imagen</h5>
+    <p>Una breve descripción del artículo en la imagen</p>
   </div>
-  <h6>Título imagen</h6>
-  <p>Una breve descripción del artículo en la imagen</p>
-</div>
 
 <div class="gallery-son">
   <div class="gallery-item">
@@ -220,7 +321,7 @@
         <img class="gallery-image" src="https://c2.staticflickr.com/6/5499/30972532232_e9a298a0c5_m.jpg" />
     </a>
     </div>
-    <h6>Título imagen</h6>
+    <h5>Título imagen</h5>
     <p>Una breve descripción del artículo en la imagen</p>
   </div>
 
@@ -230,7 +331,7 @@
         <img class="gallery-image" src="https://farm1.staticflickr.com/560/31434966252_8e1bc946da_m_d.jpg" />
     </a>
   </div>
-  <h6>Título imagen</h6>
+  <h5>Título imagen</h5>
   <p>Una breve descripción del artículo en la imagen</p>
 </div>
 
@@ -240,7 +341,7 @@
         <img class="gallery-image" src="https://c2.staticflickr.com/6/5499/30972532232_e9a298a0c5_m.jpg" />
     </a>
     </div>
-    <h6>Título imagen</h6>
+    <h5>Título imagen</h5>
     <p>Una breve descripción del artículo en la imagen</p>
   </div>
 
@@ -250,7 +351,7 @@
           <img class="gallery-image" src="https://c1.staticflickr.com/9/8148/29324593462_f890687b7a_m.jpg" />
       </a>
     </div>
-    <h6>Título imagen</h6>
+    <h5>Título imagen</h5>
     <p>Una breve descripción del artículo en la imagen</p>
   </div>
 
@@ -260,21 +361,29 @@
           <img class="gallery-image" src="https://c2.staticflickr.com/6/5499/30972532232_e9a298a0c5_m.jpg" />
       </a>
       </div>
-      <h6>Título imagen</h6>
+      <h5>Título imagen</h5>
       <p>Una breve descripción del artículo en la imagen</p>
     </div>
 
-    <div class="gallery-item">
-      <a href="https://farm1.staticflickr.com/560/31434966252_8e1bc946da_b_d.jpg" data-fancybox="images">
-          <img class="gallery-image" src="https://farm1.staticflickr.com/560/31434966252_8e1bc946da_m_d.jpg" />
-      </a>
-    </div>
-
-    <div class="gallery-item">
-      <a href="https://c2.staticflickr.com/6/5499/30972532232_051e1dc57e_h.jpg" data-fancybox="images">
-          <img class="gallery-image" src="https://c2.staticflickr.com/6/5499/30972532232_e9a298a0c5_m.jpg" />
-      </a>
+    <div class="gallery-son">
+      <div class="gallery-item">
+        <a href="https://c2.staticflickr.com/6/5499/30972532232_051e1dc57e_h.jpg" data-fancybox="images">
+            <img class="gallery-image" src="https://c2.staticflickr.com/6/5499/30972532232_e9a298a0c5_m.jpg" />
+        </a>
+        </div>
+        <h5>Título imagen</h5>
+        <p>Una breve descripción del artículo en la imagen</p>
       </div>
+
+      <div class="gallery-son">
+        <div class="gallery-item">
+          <a href="https://c2.staticflickr.com/6/5499/30972532232_051e1dc57e_h.jpg" data-fancybox="images">
+              <img class="gallery-image" src="https://c2.staticflickr.com/6/5499/30972532232_e9a298a0c5_m.jpg" />
+          </a>
+          </div>
+          <h5>Título imagen</h5>
+          <p>Una breve descripción del artículo en la imagen</p>
+        </div>
 
 </div>
 </section> <!-- END GALLERY -->
@@ -298,7 +407,7 @@
 </div>
 
 <footer>
-  <div class="contained">
+<div class="contained">
 
          <div class="social-buttons">
              <a href="https://twitter.com/">Twitter</a>
@@ -333,14 +442,58 @@
      </defs>
      </svg>
 
+    <div class="scene">
+     <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" class="scene" role="presentation" viewBox="0 0 500 900">
+     					<defs>
+     						<linearGradient id="gradient-1" x1="0%" y1="0%" x2="100%" y2="100%">
+     							<stop stop-color="#f19872"/>
+     							<stop offset="1" stop-color="#e86c9a"/>
+     						</linearGradient>
+     						<linearGradient id="gradient-2" x1="0%" y1="0%" x2="100%" y2="100%">
+     							<stop stop-color="#0947db"/>
+     							<stop offset="1" stop-color="#07d89d"/>
+     						</linearGradient>
+     						<linearGradient id="gradient-3" x1="0%" y1="0%" x2="100%" y2="100%">
+     							<stop stop-color="#ee2d29"/>
+     							<stop offset="1" stop-color="#f8ae2c"/>
+     						</linearGradient>
+     						<linearGradient id="gradient-4" x1="0%" y1="0%" x2="100%" y2="100%">
+     							<stop stop-color="#3a3d98"/>
+     							<stop offset="1" stop-color="#6f22b9"/>
+     						</linearGradient>
+     						<linearGradient id="gradient-5" x1="0%" y1="0%" x2="100%" y2="100%">
+     							<stop stop-color="#9d316e"/>
+     							<stop offset="1" stop-color="#de2d3e"/>
+     						</linearGradient>
+     						<linearGradient id="gradient-6" x1="0%" y1="0%" x2="100%" y2="100%">
+     							<stop stop-color="#00ac53"/>
+     							<stop offset="1" stop-color="#23c3e0"/>
+     						</linearGradient>
+     						<filter id="f1" x="0" y="0">
+     						      <feGaussianBlur in="SourceGraphic" stdDeviation="1" />
+     						</filter>
+     				</defs>
+     					<g class="blob-3" filter="url(#f1)">
+     						<path d="M 173.8,427.1 C 141.9,428.2 110,441.6 88.2,465.2 72.4,482.5 62.6,504.9 59.9,528 57.8,544.1 59,560.4 58.3,576.6 57.7,596.5 55.5,616.6 48.3,635.3 41,655.6 31.4,675.6 29.5,697.4 27.7,717.8 34.7,738.1 45.4,755.3 62.6,783.8 88.7,806.2 117.6,822.4 160.6,846.7 210.5,859.2 259.9,855.9 294.6,853.3 329.3,841.6 356.2,819.1 376.4,802.2 391.6,779.6 400,754.7 411.5,721.5 411.8,685.4 406.2,651 402.6,629.5 396.7,608.3 388.6,588.1 378.4,563.9 362.6,542.2 343,524.8 323.5,506.4 302.7,489.6 282.1,472.6 261.7,456.5 239.9,441 214.9,433 201.6,428.8 187.7,426.9 173.8,427.1 Z" pathdata:id="M 397.4,-2057 C 43.67,-2047 -310.1,-1933 -551.9,-1731 -727.1,-1583 -835.8,-1391 -865.7,-1193 -889,-1056 -875.7,-916.3 -883.5,-777.8 -890.1,-607.5 -914.5,-435.6 -994.4,-275.6 -1075,-102 -1182,69.08 -1203,255.6 -1223,430.1 -1145,603.7 -1027,750.8 -835.8,994.6 -546.3,1186 -225.8,1325 251.1,1533 804.4,1640 1352,1611 1737,1589 2122,1489 2420,1297 2644,1152 2813,958.7 2906,745.7 3034,461.7 3037,152.9 2975,-141.3 2935,-325.3 2869,-506.6 2780,-679.4 2666,-886.4 2491,-1072 2274,-1221 2058,-1378 1827,-1522 1598,-1667 1372,-1805 1130,-1938 853.2,-2006 705.7,-2042 551.6,-2058 397.4,-2057 Z"/>
+     						<path d="M 270.9,500.2 C 211.4,463.7 131.3,458.8 96.6,505 67.9,535.1 76.8,555.9 71.2,597 66.7,628.3 39.6,694.8 49.6,728.3 64.9,771.1 104.8,807.1 147.6,827.2 220.4,861.9 308.1,851.5 351,799.8 382.5,762.5 388.1,708.4 375.3,657 362.7,604.3 333.3,550.6 287.7,511.6 282.5,507.3 276.4,503.7 270.9,500.2 Z" pathdata:id="M 1474,-1431 C 814.4,-1744 -73.88,-1785 -458.7,-1390 -777,-1133 -678.3,-954.8 -740.4,-603.3 -790.3,-335.5 -1091,233.3 -979.9,519.9 -810.3,886 -367.8,1194 106.9,1366 914.2,1663 1887,1574 2363,1131 2712,812.4 2774,349.7 2632,-90.02 2492,-540.8 2166,-1000 1661,-1334 1603,-1371 1535,-1401 1474,-1431 Z"/>
+     						<path d="M 293.7,543 C 246.1,501.3 173.5,495.7 134.5,530.1 103.6,551.6 102,579 90.1,613.7 80.9,640.3 52.5,673.7 56.2,704.5 62.7,744.3 92.8,782.3 128.2,807 188.2,849.3 269.3,854.8 316.5,817 351.2,789.8 365.1,743.7 362.1,696.9 359.4,648.9 341.7,597.3 307.1,555.6 303,551.1 298.2,546.9 293.7,543 Z" pathdata:id="M 1727,-1065 C 1199,-1422 394.1,-1470 -38.39,-1176 -381.1,-991.6 -398.8,-757.2 -530.8,-460.4 -632.8,-232.9 -947.8,52.83 -906.7,316.3 -834.7,656.7 -500.8,981.8 -108.3,1193 557.1,1555 1457,1602 1980,1279 2365,1046 2519,651.6 2486,251.3 2456,-159.3 2259,-600.7 1876,-957.4 1830,-995.9 1777,-1032 1727,-1065 Z"/>
+     						<path d="M 306.5,585.5 C 271.3,542.9 209.4,527.6 170.8,551.4 141,565.4 122.7,593.1 107.5,621.2 95.7,642.6 79.3,662.6 78,689.5 77.9,724.6 98.5,761.5 125.5,787.7 171.3,832.7 240.7,849.2 286.9,823.6 320.8,805.3 339.5,767.9 343.5,727.3 348.1,685.8 340.2,639 316.2,598.2 313.4,593.8 309.8,589.5 306.5,585.5 Z" pathdata:id="M 1869,-701.6 C 1479,-1066 792.2,-1197 364.2,-993.3 33.69,-873.6 -169.3,-636.6 -337.8,-396.3 -468.7,-213.2 -650.6,-42.12 -665,188 -666.1,488.2 -437.6,803.9 -138.2,1028 369.7,1413 1139,1554 1652,1335 2028,1179 2235,858.6 2279,511.3 2330,156.3 2243,-244 1977,-593 1946,-630.6 1906,-667.4 1869,-701.6 Z"/>
+     						<path d="M 280.7,608.1 C 246.6,575.5 192.1,568.4 161.1,591.9 136.8,606.5 123.6,631.5 113.1,656.6 105,675.7 92.7,694 94,716.8 97.1,746.3 118.2,775.4 143.7,795 187.1,828.6 248.2,836 285.6,810.2 313,791.7 325.6,758.4 325.4,723.9 325.5,688.6 314.5,650 290.2,617.8 287.4,614.4 284,611.1 280.7,608.1 Z" pathdata:id="M 1583,-508.3 C 1205,-787.2 600.4,-847.9 256.6,-646.9 -12.89,-522 -159.3,-308.1 -275.7,-93.44 -365.5,69.94 -502,226.5 -487.5,421.5 -453.2,673.9 -219.2,922.8 63.63,1090 544.9,1378 1223,1441 1637,1220 1941,1062 2081,777.4 2079,482.2 2080,180.3 1958,-149.9 1688,-425.3 1657,-454.4 1620,-482.7 1583,-508.3 Z"/>
+     						<path d="M 276,636.4 C 245.2,609.2 196.1,603.3 168.1,622.9 146.2,635.1 134.3,656 124.8,676.9 117.5,692.9 106.4,708.2 107.6,727.2 110.4,751.8 129.4,776.1 152.4,792.5 191.6,820.5 246.7,826.7 280.4,805.2 305.1,789.7 316.5,761.9 316.3,733.1 316.4,703.6 306.4,671.4 284.5,644.5 282,641.7 278.9,639 276,636.4 Z" pathdata:id="M 1531,-266.2 C 1189,-498.9 644.7,-549.4 334.2,-381.7 91.36,-277.4 -40.61,-98.58 -146,80.2 -226.9,217.1 -350,347.9 -336.7,510.5 -305.7,720.9 -94.95,928.8 160.1,1069 594.8,1309 1206,1362 1580,1178 1854,1045 1980,807.3 1978,560.9 1979,308.6 1868,33.16 1625,-196.9 1597,-220.9 1563,-244 1531,-266.2 Z"/>
+     						<path d="M 257.2,650 C 230.7,627.8 188.4,623 164.2,639 145.4,648.9 135.1,666 127,683.1 120.6,696.1 111.1,708.6 112.1,724.2 114.5,744.2 130.9,764.1 150.8,777.5 184.5,800.4 232,805.4 261,787.9 282.4,775.2 292.2,752.5 292,729 292.1,704.9 283.5,678.6 264.6,656.6 262.4,654.3 259.8,652.1 257.2,650 Z" pathdata:id="M 1322,-149.9 C 1028,-339.8 559.4,-380.9 291,-244 82.49,-159.3 -31.74,-13.04 -121.6,133.2 -192.5,244.4 -297.9,351.4 -286.8,484.8 -260.2,655.9 -78.32,826.1 142.4,940.7 516.1,1137 1043,1179 1364,1030 1602,921.1 1710,726.9 1708,525.9 1709,319.7 1614,94.74 1404,-93.44 1380,-113.1 1351,-131.9 1322,-149.9 Z"/>
+     					</g>
+     			</svg>
+        </div>
+
         <script src="js/vendor/modernizr-3.5.0.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="/js/vendor/jquery-1.12.0.min.js"><\/script>')</script>
         <script src="js/plugins.js"></script>
-        <script src="js/main.js"></script>
         <script src="js/jquery.bxslider.min.js"></script>
         <script src="js/index.js"></script>
         <script src="js/fancy-box.js"></script>
+        <script src="js/anime.min.js"></script>
+		    <script src="js/main.js"></script>
         <script>
           $(document).ready(function(){
             $('.bxslider').bxSlider({

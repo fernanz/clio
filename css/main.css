@@ -17,6 +17,8 @@
    --pale-pink: rgba(223,73,73,.9);
    --lettering: rgba(144,164,174,0.4);
    --independiente: rgba(0,182,237,1);
+   --colonial: rgb(213,0,0);
+   --gray: rgba(120,144,156,1);
 
  }
 
@@ -120,6 +122,7 @@ textarea {
       justify-content:flex-start;
     }
 }
+
 /* ==========================================================================
    Browser Upgrade Prompt
    ========================================================================== */
@@ -165,9 +168,23 @@ img.wide {
 }
 
 #ubicacion {
-  background-image: linear-gradient(to bottom, #cfd9df 0%, #e2ebf0 50%);
+  background: url('../img/triangle-wgray.svg'), linear-gradient(to bottom, #fff 0%, #cfd9df 50%);
+  background-repeat: no-repeat;
 }
 
+#calendario {
+  background-image: url('../img/triangle-wgris.svg'), linear-gradient(to top, #cfd9df 0%, #e2ebf0 40%);
+  background-repeat: no-repeat;
+}
+
+#servicios{
+  background-image: url('../img/triangle-wgris.svg');
+  background-repeat: no-repeat;
+}
+span.nota {
+  letter-spacing: 2px;
+  color: var(--pale-orange);
+}
 /* ==========================================================================
    Header Style
    ========================================================================== */
@@ -194,7 +211,7 @@ img.wide {
 
 .menu-top a:hover {
   color: #fff;
-	background: #D50000;
+	background: var(--colonial);
 }
 
 .menu-top span.right {
@@ -395,22 +412,6 @@ h1.t-hero-title{
   .main-nav{
     display: none;
   }
-}
-
-/* ==========================================================================
-       Color Blocks Salas
-========================================================================== */
-
-.orange-block {
-  background-color:var(--orange);
-  padding:1.9em;
-  color:#eee;
-}
-
-.independencia-block {
-  background-color:var(--independiente);
-  padding:1.9em;
-  color:#eee;
 }
 
 /* ==========================================================================
@@ -655,7 +656,7 @@ h1.t-hero-title{
               margin-top: -2em;
               margin-bottom: 10em;
           }
-        }
+       }
 
 .shape_outside {
   width: 200px;
@@ -671,6 +672,15 @@ padding: .1em .1em 3em .1em;
    -moz-columns: 2 auto;
         columns: 2 auto;
 }
+
+@media screen and (max-width: 420px) {
+	.text-columns {
+padding: .1em .1em 3em .1em;
+-webkit-columns: 1 auto;
+   -moz-columns: 1 auto;
+        columns: 1 auto;
+}
+	}
 /* ==========================================================================
    Image PARALLAX
    ========================================================================== */
@@ -847,6 +857,81 @@ padding: .1em .1em 3em .1em;
      section.pics { padding: 0; }
 
    }
+
+   /* ==========================================================================
+          Color Blocks Salas
+   ========================================================================== */
+
+   .orange-block {
+     background-image: url('../img/wav.svg'), linear-gradient(to bottom, rgb(242,94,13) 0%, rgba(251,140,0,1) 100%);
+     background-repeat: no-repeat;
+     background-size:cover;
+     background-position: bottom;
+     padding:1.9em;
+     color:#eee;
+   }
+
+   .red-block {
+     background-image: linear-gradient(to bottom, rgba(213,0,0,1) 0%, rgba(213,0,0,.7) 100%);
+     padding:1.9em;
+     color:#eee;
+   }
+
+   .independencia-block {
+     background-image: linear-gradient(to bottom, #226691 0%, rgba(0,182,237,1) 100%);
+     padding:1.9em;
+     color:#eee;
+   }
+
+   .gray-block {
+     background-image: linear-gradient(to bottom, rgb(55,71,79) 0%, rgba(120,144,156,.8) 100%);
+     padding:1.9em;
+     color:#eee;
+   }
+
+   .orange-block-icn {
+     fill: rgba(251,140,0,.9);
+     width: 3.5em;
+     float: left;
+     shape-outside: circle();
+     padding-right: 1.5em;
+     padding-bottom: 0;
+   }
+
+   .red-block-icn {
+     fill: #FF8A80;
+     width: 3.5em;
+     float: left;
+     shape-outside: circle();
+     padding-right: 1.5em;
+     padding-bottom: 0;
+   }
+
+   .independencia-block-icn {
+     fill: rgba(255,255,255,.7);
+     width: 3.5em;
+     float: left;
+     shape-outside: circle();
+     padding-right: 1.5em;
+     padding-bottom: 0;
+   }
+
+   .gray-block-icn {
+     fill: rgba(144,164,174,.9);
+     width: 3.5em;
+     float: left;
+     shape-outside: circle();
+     padding-right: 1.5em;
+     padding-bottom: 0;
+   }
+
+   @media screen and (max-width: 420px) {
+     .orange-block-icn,
+     .independencia-block-icn {
+       float:none;
+     }
+   }
+
 /* ==========================================================================
    MAIN GRID
    ========================================================================== */
@@ -856,12 +941,44 @@ padding: .1em .1em 3em .1em;
     padding: 10px;
    }
 
+section.red-gridum {
+  background-image: url('../img/triangle.svg');
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-position-y: top;
+  background-size:contain;
+}
+
+section.blue-gridum {
+  background-image: url('../img/triangle-blue.svg');
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-position-y: top;
+  background-size:contain;
+}
+
+section.orange-gridum {
+  background-image: url('../img/triangle-orange.svg');
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-position-y: top;
+  background-size:contain;
+}
+
+section.gray-gridum {
+  background-image: url('../img/triangle-gray.svg');
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-position-y: top;
+  background-size:contain;
+}
+
 .gridum {
      box-sizing: border-box;
-     margin: 50px auto;
+     margin: 0 auto 50px auto;
      display: grid;
-     grid-gap: 0;
-     grid-template-columns: 340px 210px 290px 370px;
+     grid-column-gap: 10px;
+     grid-template-columns: 340px 370px 130px 370px;
      grid-template-rows: 350px repeat(2, 430px) 310px;
      justify-content: center;
    }
@@ -873,41 +990,41 @@ padding: .1em .1em 3em .1em;
   color:#1a1a1a;
 }
 
-.item7 {
+.item1 {
   grid-column: 1 / 2;
   grid-row: 1;
 }
 
-.item8 {
+.item2 {
   grid-column: 2 / 3;
   grid-row: 1 / 2;
-  padding: 75px 30px 0 0;
+  padding: 130px 30px 0 0;
 }
 
-.item9,
-.item9-light {
+.item3,
+.item3-light {
   grid-column: 4 / -2;
   grid-row: 1 / 3;
   padding-left: 40px;
 }
 
 
-.item10 {
+.item4 {
   grid-column: 2 / 4;
   grid-row: 2 / 3;
 }
 
-.item11 {
+.item5 {
   grid-column: 2 / 4;
   grid-row: 3 / 4;
 }
 
-.item12 {
+.item6 {
   grid-column: 2 / 4;
   grid-row: 4 / -1;
 }
 
-.item14 {
+.item7 {
   grid-column: 4 / 5;
   grid-row: 3 / 4;
   padding-left: 40px;
@@ -950,45 +1067,26 @@ padding: .1em .1em 3em .1em;
        font-weight: 400;
        color:#1a1a1a;
      }
-  .item1 {
-       grid-column: 1 ;
-       grid-row: 1 / 2;
-       overflow: hidden;
-     }
 
-  .item2 {
-         grid-column: 1 ;
-         grid-row: 2 / 3;
-         padding: 35px 10px;
-     }
-
-  .item4 {
-       grid-column: 1 ;
-       grid-row: 3 / 4;
-       padding-left: 10px;
-       padding-right: 10px;
-       margin-bottom: 10px;
-       overflow:hidden;
-     }
-
-  .item3,
+  .item1,
+  .item2,
+  .item4,
   .item5,
   .item6,
-  .item7,
   .item8,
   .item10,
   .item11,
   .item12 {
     display:none;
   }
-  .item9 {
+  .item3 {
     grid-column: 1 ;
     grid-row: 4 / 5;
     padding: 0;
     background-color: var(--lettering);
     overflow:hidden;
   }
-  .item9-light{
+  .item3-light{
     grid-column: 1 ;
     grid-row: 4 / 5;
     padding: 0;
@@ -996,7 +1094,7 @@ padding: .1em .1em 3em .1em;
     overflow:hidden;
   }
 
-  .item14 {
+  .item7 {
     grid-column: 1 ;
     grid-row: 5 / 6;
     padding-left: 10px;

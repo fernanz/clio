@@ -31,6 +31,9 @@
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/fonts.css">
         <link rel="stylesheet" href="css/jquery.bxslider.css">
+        <link rel='stylesheet' href="css/fancy-box.css">
+        <link rel='stylesheet' href="css/s-tyle.css">
+        <link rel='stylesheet' href="css/tooltip.css">
 
     </head>
     <body>
@@ -39,6 +42,20 @@
         <![endif]-->
 
         <!-- Add your site or application content here -->
+
+        <div class="row">
+          <div class="col col-12">
+            <div class="menu-top clearfix">
+            <span class="right">
+                      <a  href="#"><span>Inicio</span></a>
+                      <a  href="#"><span>Sala Colonia</span></a>
+                      <a  href="#"><span>Sala Independencia</span></a>
+                      <a  href="#"><span>República y Siglo XX</span></a>
+            </span>
+            </div><!-- END menu-top -->
+          </div>
+        </div>
+
 <div class="grid-head-b">
             <div class="gh-full-width-b">
                 <div class="grid-title-b">
@@ -108,37 +125,54 @@
 </ul>
 </nav>
 
-<section class="gridum">
-  <div class="item1">
-  <img src="/img/colonia.jpg" />
-  </div>
-  <div class="item2">
-  <h2>EL NACIMIENTO DE LA CIUDAD Y EVOLUCIÓN DE SU  ESPACIO URBANO</h2>
-  <hr class="thick"/>
-  </div>
-  <div class="item3"><div class="vertical-text"><h2 style="color:rgba(255,0,0,.8);">Sala Colonia</h2></div></div>
-  <div class="item item4">
-  <p>La fundación y traslado de Santiago de Guayaquil, su evolución urbana y los aspectos más destacados de nuestra historia bajo la Corona de España conforman esta sala, entre ellos la producción y el comercio, la actividad de los astilleros, la obra pública y las grandes adversidades que marcaron nuestra vida en ese entonces, tales como las invasiones piráticas, los incendios y las pestes.<br  />La sección incluye la galería de retratos de los gobernadores coloniales y también nos recuerda a los guayaquileños más notables del período.</p>
-  </div>
+<section>
+  <div class="parallax">
+    <div id="parallax">
 
-  <div class="item item5">
-  <h6>Maqueta de la ciudad <em>C.</em>1767<br /><span style="color:rgba(255,0,0,.8);">Sala Colonia</span></h6>
+      <img data-parallax='{"y": -200}' src="img/colonia-bg.jpg" />
+      <h2>SALA COLONIA</h2>
+
+    </div>
   </div>
-  <div class="item6-colonia"></div>
-  <div class="item7">
+</section>
+
+
+<section class="red-block" >
+<div class="row between">
+
+  <div class="col col-3" ></div>
+  <div class="col col-6" >
+  <h2 class="centered-text-white">EL NACIMIENTO DE LA CIUDAD Y EVOLUCIÓN DE SU  ESPACIO URBANO</h2>
+  <div class="text-columns">
+    <svg viewBox="0 0 128 128" class="red-block-icn">
+      <use xlink:href="#crown"></svg>
+  <p>La fundación y traslado de Santiago de Guayaquil, su evolución urbana y los aspectos más destacados de nuestra historia bajo la Corona de España conforman esta sala, entre ellos la producción y el comercio, la actividad de los astilleros, la obra pública y las grandes adversidades que marcaron nuestra vida en ese entonces, tales como las invasiones piráticas, los incendios y las pestes.</p>
+
+  <p>
+
+  </p>La sección incluye la galería de retratos de los gobernadores coloniales y también nos recuerda a los guayaquileños más notables del período.</p>
+  </div>
+  </div>
+  <div class="col col-3" ></div>
+
+</div>
+</section><!-- END red HEAD INTRO -->
+
+<section class="gridum red-gridum">
+  <div class="item1">
   <img src="/img/dampierre.jpg" />
   </div>
-  <div class="item8">
+  <div class="item2">
   <h2>ANTIGUA GOBERNACIÓN DE GUAYAQUIL</h2>
   <hr class="thick"/>
   </div>
-  <div class="item9">
+  <div class="item3">
   <img src="/img/ramon-garcia.jpg" />
     <div class="vertical-text">
       <h1>&#10097;</h1>
     </div>
   </div>
-  <div class="item item10">
+  <div class="item item4">
   <h1>&#10094;</h1>
   <h6>Los piratas<br  />
   <span style="color:rgba(255,0,0,.8); ">William Dampierre</span>
@@ -146,17 +180,17 @@
   <p>Guayaquil sufrió cinco invasiones piráticas a lo largo de su historia, piratas y corsarios ingleses, franceses y holandeses la asaltaron, quemaron y en ocasiones secuestraron a sus habitantes.</p>
   <p>Dampierre estuvo en Guayaquil en más de una ocasión: en 1687 en la invasión de los piratas franceses Pierre Le Picard, Francois Le Grogniet y el holandés Hewitt y, en 1709 acompañando al corsario Woodes Roger. Dampier es también conocido como "el pirata literato", autor de relatos donde describe con vívido detalle los sitios por donde pasó, entre ellos Guayaquil.</p>
   </div>
-  <div class="item11">
+  <div class="item5">
   <img src="/img/astilleros.jpg" />
   </div>
-  <div class="item item12">
+  <div class="item item6">
   <h6>Los astilleros<br  />
   <span style="color:rgba(255,0,0,.8); ">Astillero Real de la Mar del Sur</span>
   </h6>
   <p>Los astilleros de Guayaquil fueron sin duda alguna, una de las principales fuentes de ingresos económicos para esta región de la Audiencia, en los siglos XVI y XVII. La calidad de las maderas en ellos utilizadas y la estabilidad de las naves allí construidas, los convirtieron en los más importantes astilleros de la América Hispana de aquel entonces.</p>
   <hr />
   </div>
-  <div class="item item14">
+  <div class="item item7">
     <h6>Ramón García de León y Pizarro<br  />
     <span style="color:rgba(255,0,0,.8); ">Gobernador (1779 - 1790)</span>
   </h6>
@@ -234,6 +268,10 @@
         <script src="js/plugins.js"></script>
         <script src="js/main.js"></script>
         <script src="js/jquery.bxslider.min.js"></script>
+        <script src="js/index.js"></script>
+        <script src="js/fancy-box.js"></script>
+        <script src="js/anime.min.js"></script>
+        <script src="js/main.js"></script>
         <script>
           $(document).ready(function(){
             $('.bxslider').bxSlider({
