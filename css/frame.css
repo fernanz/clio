@@ -606,23 +606,12 @@ header .logo-container .logo{
 }
 .hero{
     display:block;
-    background:#1e1f21;
-    background-image:linear-gradient(-180deg,#2a2c24 0,#1e1f21 20%);
-    color:#bcc2ce;
-    overflow:hidden;
-    padding:calc(104px * 2.25) 0 0 0;
-    position:relative
+    background:#ffffff;
+    background-image: linear-gradient(to bottom, #fff 0%, #cfd9df 100%);
+    padding:0 0 0 0;
+    position:relative;
 }
-@media screen and (min-width:480px){
-    .hero{
-        padding-top:calc(104px * 1.5)
-    }
-}
-@media screen and (min-width:768px){
-    .hero{
-        padding-top:calc(104px * 1.5)
-    }
-}
+
 .hero.landing{
     padding-bottom:100px
 }
@@ -632,8 +621,9 @@ header .logo-container .logo{
     }
 }
 .hero .hero-copy{
-    margin:40px auto 104px auto
+    margin:40px auto 40px auto;
 }
+
 .hero .subhead{
     display:inline-block;
     margin:8px auto;
@@ -649,8 +639,8 @@ header .logo-container .logo{
     display:block
 }
 .hero h1{
-    color:#c9fa4b;
-    margin-bottom:0
+    line-height: 1.2em;
+    margin-bottom: .9em;
 }
 .hero h2{
     color:#fff
@@ -1006,8 +996,20 @@ header .logo-container .logo{
     padding-top: 90px;
     padding-bottom: 52px;
 }
+.editors-white{
+    background-color:#fff;
+    display:block;
+    margin: 0;
+    padding-top: 90px;
+    padding-bottom: 52px;
+}
+
 @media screen and (min-width:960px){
     .editors{
+        text-align:center
+    }
+
+    .editors-white{
         text-align:center
     }
 }

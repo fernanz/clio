@@ -124,7 +124,7 @@ textarea {
 }
 
 /* ==========================================================================
-   Browser Upgrade Prompt
+   Browser Upgrade Prompt + LEAGUE CLASSES h2
    ========================================================================== */
 
 .browserupgrade {
@@ -185,6 +185,85 @@ span.nota {
   letter-spacing: 2px;
   color: var(--pale-orange);
 }
+
+h2.league {
+  font-family:"Oswald", sans-serif;
+  font-weight: 400;
+  font-size: 2rem;
+  color: #555;
+  letter-spacing: 1px;
+  line-height: 2.3rem;
+}
+
+h2.league-two {
+  font-family:"Oswald", sans-serif;
+  font-weight: 400;
+  font-size: 4.7rem;
+  color: rgba(69,90,100,.6);
+  padding-bottom: 3rem;
+  line-height: 4.5rem;
+}
+
+h2.league-three {
+  font-family:"Oswald", sans-serif;
+  font-weight: 400;
+  font-size: 4.7rem;
+  text-shadow:0 -1px 0 rgba(0,0,0,.5);
+  color: #e76a00;
+  padding-bottom: 3rem;
+  line-height: 4.9rem;
+}
+
+h2.league-four{
+  font-family:"Oswald", sans-serif;
+  font-weight: 400;
+  font-size: 2.4rem;
+  color: #226691;
+  padding-bottom: 3rem;
+	line-height: 2.7rem;
+}
+
+h2.league-five{
+  font-family:"Oswald", sans-serif;
+  font-weight: bold;
+  color: rgba(46, 87, 103, 1);
+  padding-bottom: 1rem;
+	font-size: 3rem;
+	line-height: 3.5rem;
+}
+
+h2.league-blue {
+	font-family:"Oswald", sans-serif;
+  font-weight: 400;
+  font-size: 2.7rem;
+  color: rgba(36,57,73,1);
+  letter-spacing: 1px;
+  line-height: 3rem;
+}
+
+h2.league-blue span {
+	color: rgba(36,57,73,.7);
+	font-size: 2.3rem;
+}
+
+h2.league-blue-light {
+  font-family:"Oswald", sans-serif;
+  font-weight: 400;
+  font-size: 2rem;
+  color: #517fa4;
+  letter-spacing: 1px;
+  line-height: 2.3rem;
+}
+
+h2.league-white {
+  font-family:"Oswald", sans-serif;
+  font-weight: 400;
+  font-size: 2rem;
+  color: rgba(255,255,255,.7);
+  letter-spacing: 1px;
+  line-height: 2.3rem;
+}
+
 /* ==========================================================================
    Header Style
    ========================================================================== */
@@ -271,6 +350,15 @@ h1.t-hero-title{
     line-height: 30px;
     letter-spacing: 0.004em;
   }
+
+  .t-hero-description-dark > p {
+      font-family: "Monserrat", sans-serif;
+      font-size: 1.2em !important;
+      font-weight: 400;
+      color: rgba(36,57,73,1);
+      line-height: 30px;
+      letter-spacing: 0.004em;
+    }
 
 
 @media only screen and (max-width: 767px) {
@@ -420,7 +508,14 @@ h1.t-hero-title{
 .premiere-bg {
       background-color: rgba(238,145,11,1);
     }
-
+.premiere-b {
+      position: relative;
+      background-image:url('/img/fauno-light.svg'),linear-gradient(135deg, #f83600 0%, #f9d423 100%);
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: right;
+      padding-bottom: 100px;
+    }
     .raw {
       background-color: rgba(255,179,0,.5);
       background-image: url('https://res.cloudinary.com/magnvs/image/upload/v1520244299/clio-1_aqq65f.jpg');
@@ -585,7 +680,7 @@ h1.t-hero-title{
       }
 
 .gh-full-width-b {
-  background-image: url(../img/main-mus-light.svg);
+  background-image: url(../img/main-mus-verylight.svg);
   background-size: contain;
   background-repeat: no-repeat;
   background-position: top center;
