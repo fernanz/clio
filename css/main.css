@@ -983,6 +983,11 @@ padding: .1em .1em 3em .1em;
      padding:1.9em;
      color:#eee;
    }
+   .historia-block {
+     background-color: transparent;
+     padding:1.9em;
+     color:#1a1a1a;
+   }
 
    .orange-block-icn {
      fill: rgba(251,140,0,.9);
